@@ -54,7 +54,8 @@ def scan_blocks(chain, start_block, end_block, contract_address, eventfile='depo
                 "token": token,
                 "recipient": recipient,
                 "amount": amount,
-                "timestamp": datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                "timestamp": datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S'),
+                "transactionHash": transaction_hash
             })
 
     if end_block - start_block < 30:
