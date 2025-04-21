@@ -49,6 +49,7 @@ def scan_blocks(chain, start_block, end_block, contract_address, eventfile='depo
             recipient = event.args.recipient
             amount = event.args.amount
             timestamp = w3.eth.get_block(block_number)['timestamp']
+            transaction_hash = event.transactionHash.hex()
             event_list.append({
                 "block_number": block_number,
                 "token": token,
